@@ -1,8 +1,14 @@
+* {
+  margin: 0;
+  height: 100%;
+}
+
 body {
   background-color: #feffff;
   color: rgba(0, 0, 0, 0.78);
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 $brand-color: #506473;
@@ -39,4 +45,21 @@ $brand-color: #506473;
   img {
     height: 50em;
   }
+}
+
+.img-container {
+  background-image: url(./images/header_image.JPG);
+  height: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.inner-container {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  color: white;
+  height: auto;
 }
