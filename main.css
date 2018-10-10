@@ -1,0 +1,33 @@
+body {
+  background-color: #feffff;
+  color: rgba(0, 0, 0, 0.78);
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  align-items: center;
+  background-color: #506473;
+  display: flex;
+  height: 70px;
+}
+.navbar .logo {
+  flex-grow: 1;
+}
+.navbar .logo {
+  flex-grow: 1;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  padding-left: 1rem;
+}
+.navbar .logo img {
+  height: calc(100% - 1.5rem);
+  width: auto;
+}
+
+.header_image img {
+  height: 50em;
+}
+
+/*# sourceMappingURL=main.css.map */
