@@ -1,31 +1,62 @@
+
+// Mobile + Desktop
+
+
+// Imports the fonts. 
+// Didn't have the exact font I was looking for.
+// So had to substitue it for my website.
+
+@import url('https://fonts.googleapis.com/css?family=Barlow');
+@import url('https://fonts.googleapis.com/css?family=Assistant:200');
+
 * {
   margin: 0;
   height: 100%;
+  
 }
 
+// Applies the fonts.
+p,
+a {
+  font-family: 'Barlow', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Assistant', sans-serif;
+}
+
+
+// Brand colors. 
+$brand-color-one: #506473;
+$brand-color-two: #ebeced;
+$brand-color-three: #fff;
+$brand-color-four: #97d9ef;
+
+// Presets incase something is undefined.
 body {
-  background-color: #feffff;
+  background-color: $brand-color-two;
   color: rgba(0, 0, 0, 0.78);
   margin: 0;
   padding: 0;
   width: 100%;
+
 }
 
-$brand-color: #506473;
+// Used to prevent stuff from stretching.
+.max {
+  max-width: 1100px;
+  margin: 0 auto;
 
-.navbar {
-  $height: 70px;
+}
+
+// Top bar.
+.topbar {
+
   align-items: center;
   background-color: #506473;
   display: flex;
-  height: $height;
-
-
-
-  .logo {
-    flex-grow: 1;
-  }
-
 
   .logo {
     flex-grow: 1;
@@ -33,6 +64,7 @@ $brand-color: #506473;
     align-items: center;
     display: flex;
     padding-left: 1rem;
+    padding-top: 1rem;
 
     img {
       height: calc(100% - 1.5rem);
@@ -41,25 +73,911 @@ $brand-color: #506473;
   }
 }
 
-.header_image {
-  img {
-    height: 50em;
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Header image.
+
+
+  .img-container {
+    background-image: url(./images/header_image.jpg);
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .inner-container {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    color: $brand-color-three;
+    height: auto;
+
+    img {
+      width: 40%;
+      align-content: center;
+      margin-top: 5rem;
+      padding: 5rem;
+      background-color: rgba(255, 255, 255, 0.444);
+      border: solid 3px $brand-color-three;
+    }
+  }
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Desktop.
+
+.topbar {
+  align-items: center;
+  background-color: #506473;
+  display: flex;
+  height: 80px;
+
+  .logo {
+    flex-grow: 1;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    padding-left: 1rem;
+    padding-top: 1rem;
+
+    img {
+      height: calc(100% - 1.5rem);
+      width: auto;
+    }
   }
 }
 
-.img-container {
-  background-image: url(./images/header_image.JPG);
-  height: 70%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+
+
+  .img-container {
+    background-image: url(./images/header_image.jpg);
+    height: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .inner-container {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    color: $brand-color-three;
+    height: auto;
+
+    img {
+      width: 40%;
+      align-content: center;
+      margin-top: 5rem;
+      padding: 5rem;
+      background-color: rgba(255, 255, 255, 0.444);
+      border: solid 3px $brand-color-three;
+    }
+  }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Navigation
+
+// Used two different navigation bars. 
+// One for mobile, one for desktop.
+// Display: none; is used to hide the mobile nav when the desktop view is visible.
+
+.mobilebar {
+  display: none;
 }
 
-.inner-container {
+.navbar {
   text-align: center;
-  position: absolute;
+  background-color: $brand-color-one;
+  display: flex;
+  height: 100px;
+
+  .nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+
+  }
+
+  .menu-item {
+    width: 25%;
+    border-top: 20px solid #506473;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  a {
+    text-decoration: none;
+    text-decoration-color: none;
+    text-align: center;
+    color: $brand-color-two;
+    margin: 30px;
+
+  }
+
+  .active {
+    background-color: $brand-color-two;
+  }
+
+  .active a {
+    color: $brand-color-one;
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Homepage: Part One
+
+p {
+  font-size: 15px;
+}
+
+.main-one {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+  background-color: $brand-color-one;
+  height: 50%;
+  border: 3px solid $brand-color-three;
+
+
+  .info {
+    margin: 2rem;
+    background-color: $brand-color-two;
+    height: 87%;
+    width: 30%;
+    box-shadow: 8px 8px #273138;
+    margin-bottom: 6rem;
+  }
+
+  .info:nth-child(2) {
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  .icon {
+    margin-top: 2rem;
+    height: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 800%;
+    text-decoration: none;
+    color: $brand-color-four;
+  }
+
+  h2 {
+    text-align: center;
+    height: 5%;
+  }
+
+  p {
+    margin: 1rem;
+    text-align: center;
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Homepage: Part Two
+
+.main-two {
+  height: 35%;
   width: 100%;
-  color: white;
+  background-color: $brand-color-three;
+
+
+  div {
+
+    height: 65%;
+    width: 90%;
+    margin: 0 auto;
+
+    h2 {
+
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      height: 10%;
+      width: 100%;
+      border-bottom: 2px solid $brand-color-one;
+      margin-bottom: 1rem;
+
+    }
+
+    p {
+      color: black;
+      width: 48%;
+      height: 30%;
+      float: left;
+    }
+
+    .img {
+      height: 110%;
+      width: 49%;
+      background-image: url(./images/dog-one.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      float: right;
+      margin-top: 4rem;
+
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Homepage: Part Three
+
+.main-three {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+  background-color: $brand-color-one;
+  height: 35%;
+  border: solid 3px $brand-color-three;
+
+  img {
+    display: none;
+  }
+
+  div {
+
+    height: 65%;
+    width: 90%;
+    margin: 0 auto;
+
+    h2 {
+      height: 5%;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      height: 10%;
+      border-bottom: 2px solid $brand-color-four;
+      margin-bottom: 1rem;
+      color: $brand-color-two;
+    }
+
+
+    p {
+      color: $brand-color-two;
+      width: 49%;
+      height: 30%;
+      float: left;
+    }
+
+    .img {
+      height: 100%;
+      width: 49%;
+      background-image: url(./images/volunteers.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      float: right;
+    }
+
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// About page.
+.about-one {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+  background-color: $brand-color-one;
+  height: 50%;
+  border: solid 3px $brand-color-three;
+
+  h2 {
+    height: 5%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    height: 10%;
+    border-bottom: 2px solid $brand-color-four;
+    margin-bottom: 1rem;
+    color: $brand-color-two;
+  }
+
+
+  p {
+    color: $brand-color-two;
+    width: 49%;
+    height: 30%;
+    float: left;
+  }
+
+  .img {
+    height: 100%;
+    width: 49%;
+    background-image: url(./images/about.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    float: right;
+  }
+}
+
+//////////////////////////////////////////////////////////
+// Pets
+
+.pet-one {
+  margin: 2rem;
+  background-color: $brand-color-one;
   height: auto;
+  border: solid 3px $brand-color-three;
+  padding-bottom: 1rem;
+
+  .section-top {
+    display: flex;
+    height: 20%;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+
+    h2 {
+      width: 90%;
+      height: 10%;
+      border-bottom: 2px solid $brand-color-four;
+      color: $brand-color-two;
+      margin-top: 1rem;
+      margin-left: 2rem;
+      padding-bottom: 2rem;
+
+
+    }
+    
+    p {
+      margin: 0 auto;
+      color: $brand-color-two;
+      width: 90%;
+      height: 15%;
+      border-bottom: 2px solid $brand-color-four;
+      margin-left: 2rem;
+      padding-bottom: 2.5rem;
+
+
+    }
+
+  }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  .pet-section-one, 
+  .pet-section-two, 
+  .pet-section-three, 
+  .pet-section-four {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    background-color: $brand-color-two;
+    height: 100%;
+
+    .text {
+      flex-direction: column;
+      align-content: center;
+      display: flex;
+      text-align: center;
+      align-self: center;
+      margin: 0 0 0 7%;
+
+
+      h2 {
+        height: 5%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #97d9ef;
+        margin-bottom: 1rem;
+        color: $brand-color-one;
+        text-align: center;
+      }
+
+
+      p {
+        color: $brand-color-one;
+        height: 30%;
+        align-self: center;
+      }
+    }
+
+    img {
+      display: none;
+    }
+  }
+
+  .pet-section-one {
+    .img {
+      height: 400px;
+      width: 500px;
+      background-image: url(./images/cat-five.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+  }
+
+  .pet-section-two {
+    .img {
+      height: 400px;
+      width: 500px;
+      background-image: url(./images/dog-two.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+  }
+
+  .pet-section-three {
+    .img {
+      height: 400px;
+      width: 500px;
+      background-image: url(./images/cat-two.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+  }
+
+  .pet-section-four {
+    .img {
+      height: 400px;
+      width: 500px;
+      background-image: url(./images/edog-three.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Contact Page: Part One.
+
+// Contact form from : W3Schools.
+
+.contact-one {
+  margin: 2rem;
+  background-color: $brand-color-one;
+  height: auto;
+  border: solid 3px $brand-color-three;
+  padding-bottom: 1rem;
+  padding: 1rem 0 1rem 2rem;
+  color: $brand-color-two;
+
+  // Had to override font down here.
+  font-family: 'Barlow', sans-serif;
+
+  form {
+
+    // Any text boxes.
+    input[type=text],
+    select,
+    textarea {
+      width: 95%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    // Submit Button.
+    input[type=submit] {
+      background-color: $brand-color-four;
+      color: $brand-color-three;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    // Submit button while hovering.
+    input[type=submit]:hover {
+      background-color: $brand-color-two;
+      color: #000;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+  }
+
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Contact Page: Part Two.
+
+.contact-two {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+  background-color: #fff;
+  height: 300px;
+
+  div {
+    flex-direction: column;
+    align-content: center;
+    display: flex;
+    text-align: center;
+    align-self: center;
+    margin: 0 0 0 7%;
+    height: auto;
+
+
+    h2 {
+      height: auto;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #97d9ef;
+      margin-bottom: 1rem;
+      color: $brand-color-one;
+      text-align: center;
+
+    }
+
+    img {
+      display: none;
+    }
+
+
+    p {
+      color: $brand-color-one;
+      height: 30%;
+      align-self: center;
+    }
+  }
+
+  .img {
+    height: 300px;
+    width: 500px;
+    background-image: url(./images/map.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Contact Page: Part Three.
+
+.contact-three {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+  background-color: $brand-color-one;
+  height: 35%;
+  border: solid 3px $brand-color-three;
+
+  div {
+
+    height: 65%;
+    width: 90%;
+    margin: 0 auto;
+
+    h2 {
+      height: 5%;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      height: 10%;
+      border-bottom: 2px solid $brand-color-four;
+      margin-bottom: 1rem;
+      color: $brand-color-two;
+    }
+
+
+    p {
+      color: $brand-color-two;
+      width: 49%;
+      height: 30%;
+      float: left;
+    }
+
+    .img {
+      height: 100%;
+      width: 49%;
+      background-image: url(./images/dog-four.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      float: right;
+    }
+
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Footer
+
+.footer {
+  background-color: $brand-color-one;
+  height: 20px;
+
+  display: flex;
+
+  p {
+    margin: 0 auto;
+    color: $brand-color-two;
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Mobile + Tablet View
+
+// This sets the max width.
+// Anything that is larger will use the default attributes (Desktop View).
+
+@media all and (max-width: 800px) {
+
+  .navbar {
+    display: none;
+  }
+
+  .mobilebar {
+    text-align: center;
+    background-color: $brand-color-one;
+    display: flex;
+    height: 100px;
+    width: 100%;
+
+
+    .nav {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+
+    }
+
+    .menu-item {
+      width: 25%;
+      border-top: 20px solid #506473;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+    }
+
+    a {
+      text-decoration: none;
+      text-decoration-color: none;
+      text-align: center;
+      color: $brand-color-two;
+      margin: 30px;
+      font-size: 50px;
+
+    }
+
+    .active {
+      background-color: $brand-color-two;
+    }
+
+    .active a {
+      color: $brand-color-one;
+    }
+  }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Homepage Mobile: Part One.
+
+  .main-one {
+    margin: 1rem;
+    height: 25%;
+
+    .info {
+      margin: 2rem 1rem 1rem 1rem;
+      height: 70%;
+      font-size: 12px;
+
+    }
+
+    // Using icons for mobile navigation.
+    // So took out the icons and just used the text.
+    // Would have been to confusing with repeated icons.
+
+    .icon {
+      display: none;
+    }
+
+    h2 {
+      margin: 1rem 0;
+      padding-bottom: 0.5rem;
+
+    }
+
+    p {
+      margin: 1rem 1rem;
+      font-size: 10px;
+      padding-top: 0.5rem;
+      border-top: 2px solid $brand-color-four;
+    }
+  }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Homepage Mobile: Part Two.
+
+  .main-two {
+
+    height: 20%;
+
+    div {
+      width: calc(100% - 2rem);
+
+      h2 {
+        width: 90%;
+        margin: 1rem;
+        padding-bottom: 2rem;
+      }
+
+      p {
+        width: 90%;
+        font-size: 11px;
+        float: none;
+        margin: 1rem;
+      }
+    }
+
+    .img {
+      display: none;
+    }
+  }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Homepage Mobile: Part Three.
+
+  .main-three {
+
+    height: 50%;
+
+    div {
+      width: calc(100% - 2rem);
+
+
+      p {
+        font-size: 10px;
+        width: 100%;
+      }
+    }
+
+    .img {
+      display: none;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 300px;
+      height: 225px;
+      margin-bottom: 1rem;
+    }
+
+    .about {
+      height: 150px;
+    }
+  }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// About Mobile
+
+  .about-content {
+    height: 40%;
+  }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Pet Page (Adoption Page) Mobile
+
+.pet-one {
+  .section-top {
+    div {
+      h2 {
+        width: 90%;
+        margin: 1rem auto 0 auto;
+      }
+
+      p {
+        width: 90%;
+        margin: 1rem auto 0 auto;
+      }
+    }
+  }
+}
+
+  .pet {
+    .text {
+      width: 85%;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      h2 {
+        width: 100%
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .img {
+      display: none;
+    }
+  }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Contact Page Mobile
+
+  .contact-one {
+    padding: 1rem 1rem 1rem 2rem;
+  }
+
+  .contact-three {
+
+    height: 25%;
+
+    div {
+      p {
+        width: 100%;
+      }
+    }
+
+    .img {
+      display: none;
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Contact Page Mobile - Map
+
+// Used different width for location.
+// Mobile will be small, but wanted tablet to be same as desktop.
+
+@media all and (max-width: 575px) {
+  .contact-two {
+    width: 100;
+    margin: 0 auto;
+    height: 55%;
+
+    div {
+      h2 {
+        text-align: center;
+        width: calc(95% - 2rem);
+        margin: 0 1rem 1rem 1rem;
+      }
+
+      img {
+        display: block;
+        width: 95%;
+      }
+
+      p {
+        margin: 1rem;
+      }
+    }
+
+    .img {
+      display: none;
+    }
+  }
 }
